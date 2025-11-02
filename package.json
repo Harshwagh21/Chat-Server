@@ -1,0 +1,33 @@
+{
+  "name": "Chat-Server",
+  "version": "1.0.0",
+  "description": "High-performance location-based chat backend with real-time communication",
+  "type": "module",
+  "main": "src/infrastructure/server.js",
+  "scripts": {
+    "start": "node src/infrastructure/server.js",
+    "dev": "nodemon src/infrastructure/server.js",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["chat", "location", "real-time", "socket.io", "express"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.2",
+    "redis": "^5.9.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
+}
