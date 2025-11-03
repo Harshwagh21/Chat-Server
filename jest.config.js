@@ -10,9 +10,12 @@ export default {
   coverageReporters: ['text', 'lcov', 'html'],
   setupFilesAfterEnv: ['<rootDir>/tests/setup.js'],
   testTimeout: 10000,
-  transform: {},
-  extensionsToTreatAsEsm: ['.js'],
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
+  transform: {
+    '^.+\\.js$': ['babel-jest', { 
+      presets: [['@babel/preset-env', { 
+        targets: { node: 'current' },
+        modules: 'auto'
+      }]] 
+    }]
   }
 };

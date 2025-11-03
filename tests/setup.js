@@ -1,24 +1,15 @@
 /**
- * Jest Test Setup
+ * Jest Test Setup - ES Modules
  * Global test configuration and utilities
  */
-
 // Load test environment variables
-require('dotenv').config({ path: '.env.test' });
+import 'dotenv/config';
 
-// Global test timeout
-jest.setTimeout(10000);
-
-// Mock console methods in tests to reduce noise
-global.console = {
-  ...console,
-  log: jest.fn(),
-  error: jest.fn(),
-  warn: jest.fn(),
-  info: jest.fn(),
-};
-
-// Clean up after each test
-afterEach(() => {
-  jest.clearAllMocks();
-});
+// Mock console methods in tests to reduce noise (optional)
+// global.console = {
+//   ...console,
+//   log: () => {},
+//   error: () => {},
+//   warn: () => {},
+//   info: () => {},
+// };

@@ -1,11 +1,11 @@
 /**
- * Configuration Management
- * Loads and validates environment variables
+ * Configuration Management - Optimized for Cloud Resources
+ * Loads and validates environment variables with efficient defaults
  */
 
 const config = {
   // Server
-  PORT: process.env.PORT || 9000,
+  PORT: parseInt(process.env.PORT) || 9000,
   NODE_ENV: process.env.NODE_ENV || 'development',
   
   // Database
@@ -13,7 +13,7 @@ const config = {
   REDIS_URI: process.env.REDIS_URI || 'redis://localhost:6379',
   
   // Authentication
-  JWT_SECRET: process.env.JWT_SECRET || 'fallback-secret-change-in-production',
+  JWT_SECRET: process.env.JWT_SECRET || 'idhar-aagye-ho-to-hire-he-krlo',
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '7d',
   
   // Security
